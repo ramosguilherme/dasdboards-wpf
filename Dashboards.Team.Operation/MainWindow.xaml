@@ -3,10 +3,31 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:Dashboards.Team.Operation"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Dash Team Operation" Height="600" Width="1024" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.ColumnSpan="2" Background="#FF8522BD">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Width="25" Height="25" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFF">
+                    <materialDesign:PackIcon Kind="Bell"></materialDesign:PackIcon>
+                </Button>
+                <Button Width="25" Height="25" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFF">
+                    <materialDesign:PackIcon Kind="Account"></materialDesign:PackIcon>
+                </Button>
+                <Button Width="25" Height="25" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFF">
+                    <materialDesign:PackIcon Kind="Power"></materialDesign:PackIcon>
+                </Button>
+            </StackPanel>
+        </Grid>
     </Grid>
 </Window>
