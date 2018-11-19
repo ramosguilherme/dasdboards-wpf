@@ -16,18 +16,75 @@
             <RowDefinition Height="30"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Grid Grid.ColumnSpan="2" Background="#FF8522BD">
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+        <Grid Grid.Row="0" x:Name="GridBarra" Grid.ColumnSpan="2" Background="#FF8522BD" MouseDown="GridBarra_MouseDown">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10, 0">
                 <Button Width="25" Height="25" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFF">
                     <materialDesign:PackIcon Kind="Bell"></materialDesign:PackIcon>
                 </Button>
                 <Button Width="25" Height="25" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFF">
                     <materialDesign:PackIcon Kind="Account"></materialDesign:PackIcon>
                 </Button>
-                <Button Width="25" Height="25" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFF">
+                <Button Width="25" Height="25" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFF" Click="ButtonFechar_Click">
                     <materialDesign:PackIcon Kind="Power"></materialDesign:PackIcon>
                 </Button>
             </StackPanel>
         </Grid>
+        <Grid Grid.Row="1">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFC3C3C3" Offset="1"/>
+                    <GradientStop Color="#FFE0E0E0"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.Effect>
+                <DropShadowEffect RenderingBias="Quality" Color="#FFDEDEDE" ShadowDepth="1" />
+            </Grid.Effect>
+            <Grid Background="#FFBD47FF">
+                <TextBlock Text="Dashboard" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Foreground="#FFF" FontWeight="Bold"/>
+            </Grid>
+            <StackPanel Grid.Row="1">
+                <Button Margin="10" Background="#FF8522BD">
+                    <Grid Width="150">
+                        <materialDesign:PackIcon Kind="ViewDashboard" VerticalAlignment="Bottom" />
+                        <TextBlock HorizontalAlignment="Center" Text="Dashboard" />
+                    </Grid>
+                </Button>
+                <Button Margin="10" Background="#FF8522BD">
+                    <Grid Width="150">
+                        <materialDesign:PackIcon Kind="Person" VerticalAlignment="Bottom" />
+                        <TextBlock HorizontalAlignment="Center" Text="Perfil" />
+                    </Grid>
+                </Button>
+                <Button Margin="10" Background="#FF8522BD">
+                    <Grid Width="150">
+                        <materialDesign:PackIcon Kind="ContentPaste" VerticalAlignment="Bottom" />
+                        <TextBlock HorizontalAlignment="Center" Text="Tabelas" />
+                    </Grid>
+                </Button>
+                <Button Margin="10" Background="#FF8522BD">
+                    <Grid Width="150">
+                        <materialDesign:PackIcon Kind="TshirtCrew" VerticalAlignment="Bottom" />
+                        <TextBlock HorizontalAlignment="Center" Text="Produtos" />
+                    </Grid>
+                </Button>
+                <Button Margin="10" Background="#FF8522BD">
+                    <Grid Width="150">
+                        <materialDesign:PackIcon Kind="Truck" VerticalAlignment="Bottom" />
+                        <TextBlock HorizontalAlignment="Center" Text="Fornecedores" />
+                    </Grid>
+                </Button>
+                <Button Margin="10" Background="#FF8522BD">
+                    <Grid Width="150">
+                        <materialDesign:PackIcon Kind="Settings" VerticalAlignment="Bottom" />
+                        <TextBlock HorizontalAlignment="Center" Text="Configurações" />
+                    </Grid>
+                </Button>
+            </StackPanel>
+        </Grid>
+
     </Grid>
 </Window>

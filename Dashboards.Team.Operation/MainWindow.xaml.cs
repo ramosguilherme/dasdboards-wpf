@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 
 namespace Dashboards.Team.Operation
 {
+
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -23,6 +24,16 @@ namespace Dashboards.Team.Operation
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void ButtonFechar_Click(object sender, RoutedEventArgs e)
+        {
+            App.Current.Shutdown();
+        }
+
+        private void GridBarra_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
         }
     }
 }
